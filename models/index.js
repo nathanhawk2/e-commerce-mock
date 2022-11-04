@@ -17,9 +17,9 @@ Category.hasMany(Product, {
 Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
-    unique: false
+    // unique: false
   },
-  as: 'product_tags',
+  // as: 'product_tags',
   foreignKey: 'product_id'
 })
 
@@ -27,9 +27,9 @@ Product.belongsToMany(Tag, {
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
-    unique: false
+    // unique: false
   },
-  as: 'tagged_products',
+  // as: 'tagged_products',
   foreignKey: 'tag_id'
 })
 
